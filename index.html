@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahnlabs - CET 2025 & Bus Booking Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #ee5a24);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: #ff6b6b;
+        }
+
+        .service-card h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn.secondary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn.secondary:hover {
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .exam-info {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            border-left: 5px solid #2196f3;
+        }
+
+        .exam-info h3 {
+            color: #1976d2;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .exam-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .detail-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .detail-item strong {
+            color: #1976d2;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card {
+                padding: 20px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to Shahnlabs</h1>
+            <p>Your Gateway to CET 2025 & Bus Booking Services</p>
+        </div>
+
+        <div class="content">
+            <div class="services-grid">
+                <div class="service-card">
+                    <h2>🎓 Haryana CET 2025 - Admit Card</h2>
+                    <p>Download your admit card for the <span class="highlight">Common Eligibility Test (CET) 2025</span> for Group C posts. The exam is scheduled for July 26-27, 2025.</p>
+                    <p><strong>Important:</strong> Use your CET Registration No. or Registered Mobile No. and Password to access the portal.</p>
+                    <a href="https://cet2025groupc.hryssc.com/#/login" target="_blank" class="btn">Download Admit Card</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>🚌 Free Bus Ticket Booking</h2>
+                    <p>Book your bus tickets for free through our convenient online booking system. Travel comfortably and save money on your journey.</p>
+                    <p><strong>Features:</strong> Easy booking, multiple routes, and instant confirmation.</p>
+                    <a href="https://d3k2a3bjun47s4.cloudfront.net/index.html" target="_blank" class="btn secondary">Book Bus Tickets</a>
+                </div>
+            </div>
+
+            <div class="exam-info">
+                <h3>📋 Haryana CET 2025 - Important Information</h3>
+                <p>The Haryana Staff Selection Commission is conducting the Common Eligibility Test for Group C posts with approximately <strong>13.47 lakh candidates</strong> registered.</p>
+                
+                <div class="exam-details">
+                    <div class="detail-item">
+                        <strong>Exam Dates:</strong>
+                        July 26-27, 2025
+                    </div>
+                    <div class="detail-item">
+                        <strong>Duration:</strong>
+                        1 hour 45 minutes
+                    </div>
+                    <div class="detail-item">
+                        <strong>Questions:</strong>
+                        100 MCQs (100 marks)
+                    </div>
+                    <div class="detail-item">
+                        <strong>Mode:</strong>
+                        Offline (OMR Sheet)
+                    </div>
+                    <div class="detail-item">
+                        <strong>Shifts:</strong>
+                        4 shifts over 2 days
+                    </div>
+                    <div class="detail-item">
+                        <strong>Admit Card Released:</strong>
+                        July 17, 2025
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 8px; border-left: 4px solid #ffc107;">
+                    <strong>⚠️ Important Note:</strong> Fill all bubbles on the OMR sheet. Leaving any bubble empty will result in a deduction of one mark. Candidates will undergo extensive frisking with metal detectors before entering the examination center.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Shahnlabs. All Rights Reserved. | Serving students and travelers with reliable services.</p>
+        </div>
+    </div>
+</body>
+</html>
